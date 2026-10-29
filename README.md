@@ -1,6 +1,6 @@
-# Puzzle UT2 · Pieza NN: Nombre de la pieza
+# Puzzle UT2 · Pieza 03: Memoria RAM
 
-**Grupo:** Nombre Apellido (@usuario) · Nombre Apellido (@usuario)
+**Grupo:** Caleb Martín (@calebmartinc14) · Daniel Prades (@danipr1125)
 
 > Máximo 2 folios por las dos caras (unas 1.600–2.000 palabras) y al menos 3 imágenes en `img/`.
 
