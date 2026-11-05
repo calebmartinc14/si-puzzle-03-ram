@@ -2,7 +2,7 @@
 
 **Grupo:** Caleb Martín (@calebmartinc14) · Daniel Prades (@danipr1125)
 
-![Módulos de memoria RAM DDR5 instalados en una placa base](img/ram_ddr5_modulos.jpg)
+![Módulos de memoria RAM DDR5 instalados en una placa base](img/ram_ddr5_modulos.png)
 
 ## 1. Qué es y qué función cumple en el sistema
 
