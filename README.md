@@ -30,7 +30,7 @@ El proceso básico es:
 4. El módulo envía los datos al procesador.
 5. Si el dato se modifica, se vuelve a escribir en la RAM.
 
-En DDR5, cada módulo usa dos subcanales independientes de 32 bits, en lugar de un único canal de 64 bits como DDR4. Esto mejora la eficiencia al acceder a los datos. Además, DDR5 incorpora un chip PMIC que gestiona la alimentación directamente en el módulo y añade ECC interno para corregir ciertos errores de datos. [15]
+En DDR5, cada módulo usa dos subcanales independientes de 32 bits, en lugar de un único canal de 64 bits como DDR4. Esto mejora la eficiencia al acceder a los datos. Además, DDR5 incorpora un chip PMIC que gestiona la alimentación directamente en el módulo y añade ECC interno para corregir ciertos errores de datos.
 
 ![Estructura interna simplificada de una celda DRAM](img/ram_celda_dram.jpg)
 
@@ -40,11 +40,11 @@ En DDR5, cada módulo usa dos subcanales independientes de 32 bits, en lugar de 
 |---|---:|---|---|
 | Capacidad | GB | 8, 16, 32 o 64 GB por equipo | Cantidad de datos que puede tener cargados a la vez. Más capacidad permite usar más programas simultáneamente. |
 | Tipo de memoria | — | DDR4, DDR5 | Generación de la memoria. Cada generación cambia el conector, el voltaje y la velocidad. |
-| Velocidad de transferencia | MT/s | DDR4: 2133–3200 MT/s; DDR5: 4800–6400 MT/s o más | Número de transferencias por segundo. En DDR, “doble tasa de datos” significa dos transferencias por ciclo de reloj. [12] |
+| Velocidad de transferencia | MT/s | DDR4: 2133–3200 MT/s; DDR5: 4800–6400 MT/s o más | Número de transferencias por segundo. En DDR, “doble tasa de datos” significa dos transferencias por ciclo de reloj. |
 | Ancho de banda | GB/s | DDR5-5600: unos 44,8 GB/s por módulo | Cantidad de datos que puede moverse por segundo. Se calcula a partir de la velocidad y el ancho del bus. |
 | Latencia CAS | Ciclos de reloj | CL30, CL36, CL40, CL46 | Número de ciclos que tarda la RAM en responder tras recibir una orden de lectura. Menor valor suele indicar mayor rapidez. |
-| Timings | Ciclos | Por ejemplo, 40-40-40 | Series de tiempos internos: CAS Latency, RAS to CAS Delay y RAS Precharge Time. [4] |
-| Voltaje | V | DDR4: 1,2 V; DDR5: 1,1 V base | Energía necesaria para funcionar. Menor voltaje reduce el consumo y el calor. [15] |
+| Timings | Ciclos | Por ejemplo, 40-40-40 | Series de tiempos internos: CAS Latency, RAS to CAS Delay y RAS Precharge Time. |
+| Voltaje | V | DDR4: 1,2 V; DDR5: 1,1 V base | Energía necesaria para funcionar. Menor voltaje reduce el consumo y el calor. |
 | Formato | — | UDIMM, SO-DIMM | UDIMM se usa en sobremesa; SO-DIMM, más pequeña, en portátiles. |
 | Canales | — | 1, 2, 4 canales | Número de rutas independientes entre RAM y CPU. Dos módulos pueden activar doble canal y mejorar el rendimiento. |
 | ECC | — | ECC / no ECC | Capacidad de detectar y corregir errores. Es habitual en servidores; los equipos domésticos normalmente usan RAM no ECC. |
@@ -60,12 +60,12 @@ La evolución principal de la RAM de consumo ha pasado por las generaciones DDR:
 | DDR | 2000 | 200–400 MT/s | 2,5 V | Primera memoria de doble tasa de datos. |
 | DDR2 | 2003 | 400–800 MT/s | 1,8 V | Mayor velocidad y menor consumo. |
 | DDR3 | 2007 | 800–2133 MT/s | 1,5 V | Más capacidad y eficiencia energética. |
-| DDR4 | 2014 | 2133–3200 MT/s | 1,2 V | Mayor densidad y mejor rendimiento. [12] |
-| DDR5 | 2021 | 4800–6400 MT/s o más | 1,1 V | Dos subcanales, PMIC en el módulo, ECC interno y mayores capacidades. [15] |
+| DDR4 | 2014 | 2133–3200 MT/s | 1,2 V | Mayor densidad y mejor rendimiento. |
+| DDR5 | 2021 | 4800–6400 MT/s o más | 1,1 V | Dos subcanales, PMIC en el módulo, ECC interno y mayores capacidades. |
 
 Los estándares actuales más relevantes son:
 
-- **DDR5**: es el estándar actual en PCs nuevos. Ofrece mayores velocidades y capacidades por módulo que DDR4. [12]
+- **DDR5**: es el estándar actual en PCs nuevos. Ofrece mayores velocidades y capacidades por módulo que DDR4. 
 - **DDR4**: sigue siendo muy común en equipos no muy antiguos. Es compatible solo con placas y procesadores que admitan DDR4.
 - **LPDDR5 / LPDDR5X**: versiones de bajo consumo usadas sobre todo en portátiles delgados, móviles y tabletas. Normalmente van soldadas a la placa.
 - **GDDR6 / GDDR6X**: memorias diseñadas para tarjetas gráficas, optimizadas para un ancho de banda muy alto.
@@ -82,13 +82,13 @@ No se puede mezclar DDR4 y DDR5 en el mismo equipo: los conectores, señales y c
 | Dato de la ficha | Qué significa | ¿Es bueno? ¿Para qué uso? |
 |---|---|---|
 | Capacidad: 16 GB | El módulo puede almacenar 16 gigabytes de datos temporales. | Sí. Es adecuado para ofimática, navegación, programación y juegos actuales. Para edición de vídeo o máquinas virtuales, 32 GB es más recomendable. |
-| Tipo: DDR5 | Es memoria de quinta generación de doble tasa de datos. | Sí. Es el estándar actual para equipos nuevos, aunque exige una placa base compatible. [15] |
-| Velocidad: 5600 MT/s | Realiza 5600 millones de transferencias por segundo. Equivale a PC5-44800. | Es una velocidad buena y muy habitual en DDR5. Aporta un rendimiento sólido sin necesidad de configuraciones extremas. [3][4] |
-| Latencia CAS: CL40 | Tarda 40 ciclos de reloj en empezar a entregar un dato tras una orden de lectura. | Es correcta para DDR5-5600, aunque no es la más baja del mercado. Para juegos y uso general es suficiente; para competición o tareas muy sensibles a latencia, CL30–CL36 puede ser mejor. [2][3] |
-| Timings: 40-40-40 | CAS Latency, RAS to CAS Delay y RAS Precharge Time son 40 ciclos. | Son valores estándar para este modelo. Indican una configuración estable, no extrema. [3] |
-| Voltaje: 1,25 V con XMP | Con el perfil XMP activado, el módulo funciona a 1,25 V para alcanzar 5600 MT/s. | Es un consumo bajo y razonable. Sin activar XMP, puede funcionar a 4800 MT/s y 1,1 V según el perfil JEDEC. [3] |
-| Formato: DIMM de 288 pines | Es un módulo para ordenador de sobremesa. | Correcto para torres y placas base ATX, micro-ATX o mini-ITX compatibles con DDR5. [4] |
-| Perfil Intel XMP 3.0 | Permite activar automáticamente la velocidad y latencias optimizadas desde la BIOS/UEFI. | Útil si la placa base y el procesador lo admiten. Sin activarlo, la RAM puede arrancar a una velocidad menor. [3] |
+| Tipo: DDR5 | Es memoria de quinta generación de doble tasa de datos. | Sí. Es el estándar actual para equipos nuevos, aunque exige una placa base compatible. |
+| Velocidad: 5600 MT/s | Realiza 5600 millones de transferencias por segundo. Equivale a PC5-44800. | Es una velocidad buena y muy habitual en DDR5. Aporta un rendimiento sólido sin necesidad de configuraciones extremas. |
+| Latencia CAS: CL40 | Tarda 40 ciclos de reloj en empezar a entregar un dato tras una orden de lectura. | Es correcta para DDR5-5600, aunque no es la más baja del mercado. Para juegos y uso general es suficiente; para competición o tareas muy sensibles a latencia, CL30–CL36 puede ser mejor. |
+| Timings: 40-40-40 | CAS Latency, RAS to CAS Delay y RAS Precharge Time son 40 ciclos. | Son valores estándar para este modelo. Indican una configuración estable, no extrema. |
+| Voltaje: 1,25 V con XMP | Con el perfil XMP activado, el módulo funciona a 1,25 V para alcanzar 5600 MT/s. | Es un consumo bajo y razonable. Sin activar XMP, puede funcionar a 4800 MT/s y 1,1 V según el perfil JEDEC. |
+| Formato: DIMM de 288 pines | Es un módulo para ordenador de sobremesa. | Correcto para torres y placas base ATX, micro-ATX o mini-ITX compatibles con DDR5. |
+| Perfil Intel XMP 3.0 | Permite activar automáticamente la velocidad y latencias optimizadas desde la BIOS/UEFI. | Útil si la placa base y el procesador lo admiten. Sin activarlo, la RAM puede arrancar a una velocidad menor. |
 | Formato unbuffered | Es memoria sin registros intermedios, habitual en PCs domésticos. | Correcto para uso personal. No es el tipo usado normalmente en servidores. |
 
 **Valoración:** es una memoria equilibrada para un PC de sobremesa actual. Sus 16 GB y 5600 MT/s son adecuados para estudiar, programar, navegar, jugar y realizar tareas multimedia ligeras. Si el presupuesto lo permite, comprar un kit de dos módulos de 8 GB permite usar doble canal.
@@ -124,11 +124,11 @@ No se puede mezclar DDR4 y DDR5 en el mismo equipo: los conectores, señales y c
 
 ## 7. Fuentes
 
-- Kingston Technology. *Memoria Kingston FURY Beast DDR5*. <https://www.kingston.com/es/memory/gaming/kingston-fury-beast-ddr5-memory> [2]
-- Kingston Technology. *DDR4 vs DDR5 DRAM: Las diferencias en rendimiento, compatibilidad y soporte de la plataforma*. <https://www.kingston.com/unitedkingdom/es/blog/pc-performance/ddr-memory-generation-differences> [15]
-- SHI. *Kingston FURY Beast DDR5 KF556C40BB-16: especificaciones técnicas*. <https://www.uk.shi.com/product/44229087/Kingston-FURY-Beast-DDR5> [3]
-- LDLC. *Kingston FURY Beast 16 GB DDR5 5600 MHz CL40 — ficha técnica*. <https://www.ldlc.com/es-es/ficha/PB00475594.html> [4]
-- Crucial. *Crucial 16GB DDR5-5600 SODIMM CT16G56C46S5*. <https://www.crucial.com/memory/ddr5/ct16g56c46s5> [1]
+- Kingston Technology. *Memoria Kingston FURY Beast DDR5*. <https://www.kingston.com/es/memory/gaming/kingston-fury-beast-ddr5-memory> 
+- Kingston Technology. *DDR4 vs DDR5 DRAM: Las diferencias en rendimiento, compatibilidad y soporte de la plataforma*. <https://www.kingston.com/unitedkingdom/es/blog/pc-performance/ddr-memory-generation-differences> 
+- SHI. *Kingston FURY Beast DDR5 KF556C40BB-16: especificaciones técnicas*. <https://www.uk.shi.com/product/44229087/Kingston-FURY-Beast-DDR5> 
+- LDLC. *Kingston FURY Beast 16 GB DDR5 5600 MHz CL40 — ficha técnica*. <https://www.ldlc.com/es-es/ficha/PB00475594.html> 
+- Crucial. *Crucial 16GB DDR5-5600 SODIMM CT16G56C46S5*. <https://www.crucial.com/memory/ddr5/ct16g56c46s5> 
 
 ## Uso de IA
 
@@ -143,8 +143,8 @@ No se puede mezclar DDR4 y DDR5 en el mismo equipo: los conectores, señales y c
 
 **Cómo comprobamos sus respuestas:**
 
-1. **Contrastamos con fuentes oficiales:** consultamos la página de Kingston para verificar capacidades, velocidades, latencias, voltajes y compatibilidad del modelo elegido. [2]
-2. **Comprobamos datos técnicos en fichas independientes:** usamos fichas de distribuidores como SHI y LDLC para confirmar la referencia, el formato DIMM de 288 pines, el CL40 y los timings 40-40-40. [3][4]
-3. **Verificamos afirmaciones generales:** comparamos las diferencias DDR4/DDR5 con un artículo técnico de Kingston, comprobando velocidad, voltaje, subcanales, longitud de ráfaga y ECC interno. [15]
+1. **Contrastamos con fuentes oficiales:** consultamos la página de Kingston para verificar capacidades, velocidades, latencias, voltajes y compatibilidad del modelo elegido. 
+2. **Comprobamos datos técnicos en fichas independientes:** usamos fichas de distribuidores como SHI y LDLC para confirmar la referencia, el formato DIMM de 288 pines, el CL40 y los timings 40-40-40. 
+3. **Verificamos afirmaciones generales:** comparamos las diferencias DDR4/DDR5 con un artículo técnico de Kingston, comprobando velocidad, voltaje, subcanales, longitud de ráfaga y ECC interno. 
 4. **Descartamos respuestas sin fuente o demasiado genéricas:** si la IA decía “la RAM es muy rápida” sin explicar por qué, buscamos el dato concreto: la RAM es más rápida que el SSD porque está diseñada para acceso directo y continuo por parte de la CPU.
-5. **Revisamos coherencia técnica:** por ejemplo, confirmamos que DDR5 no es compatible con DDR4 y que una velocidad de 5600 MT/s equivale a PC5-44800. [4][15]
+5. **Revisamos coherencia técnica:** por ejemplo, confirmamos que DDR5 no es compatible con DDR4 y que una velocidad de 5600 MT/s equivale a PC5-44800. 
