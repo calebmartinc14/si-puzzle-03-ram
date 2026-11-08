@@ -32,7 +32,7 @@ El proceso básico es:
 
 En DDR5, cada módulo usa dos subcanales independientes de 32 bits, en lugar de un único canal de 64 bits como DDR4. Esto mejora la eficiencia al acceder a los datos. Además, DDR5 incorpora un chip PMIC que gestiona la alimentación directamente en el módulo y añade ECC interno para corregir ciertos errores de datos.
 
-![Estructura interna simplificada de una celda DRAM](img/ram_celda_dram.jpg)
+![Estructura interna simplificada de una celda DRAM](img/ram_celda_dram.png)
 
 ## 3. Características, unidades y cómo se miden
 
@@ -120,7 +120,7 @@ No se puede mezclar DDR4 y DDR5 en el mismo equipo: los conectores, señales y c
 - Colocar los módulos en ranuras que no activan doble canal.
 - No activar XMP o EXPO en la BIOS tras instalar una RAM de alta velocidad.
 
-![Instalación de un módulo RAM en una ranura DIMM](img/ram_instalacion_dimm.jpg)
+![Instalación de un módulo RAM en una ranura DIMM](img/ram_instalacion_dimm.png)
 
 ## 7. Fuentes
 
